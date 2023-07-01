@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+:root {
+    --clr-neon: hsl(197, 93%, 55%);
+    --clr-bg: hsl(320, 100%, 52%);
+    --square-width : 50px;
+    --square-heigth : 50px;
+    --circle-color: white;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#index-hack {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+}
+
+body {
+    background-image: url(../img/background.png);
+    position: relative;
+    font-family: 'Karla', sans-serif;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#robot {
+  margin-bottom: 15px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 60%;
+  background-color: rgb(0, 70, 131);
+}
+
+@keyframes colors {
+  0% {
+    background-color: #af1818;
+  }
+  100% {
+    background-color: #811313;
+  }
+}
+
+#button {
+  overflow: hidden;
+  font-family: 'PT Sans', sans-serif;
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1em;
+  background-color: #af1818;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #550a0a;
+  transition: background-color 1s;
+}
+
+.stars, .square {
+    border-radius: 10px;
+    height: 63px;
+    width: 80px;
+}
+
+.stars {
+    background-image: url('../img/star\ \(1\).png');
+    background-size: cover;
+    background-position-x: -3px;
+  }
+
+#squares {
+    background-color: #2a43af;
+    height: 400px;
+    width: 490px;
+    padding: 20px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+
+  .square {
+    background-color: rgb(0, 119, 223);
+    border: 5px solid rgba(255, 255, 255, 0.397);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+
+@keyframes pointer {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+#hidden {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Balsamiq Sans", cursive;
+  color: var(--clr-neon);
+}
+
+#text {
+  font-size: 28px;
+  color: var(--circle-color);
+}
+
+#point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load {
+  width: 7px;
+  height: 7px;
+  background-color: var(--circle-color);
+  border-radius: 50%;
+  margin-right: 5px;
+  position: relative;
+  top: 10px;
+}
+
+.animation-0 {
+  animation: pointer 2s ease-out infinite;
+}
+
+.animation-1 {
+  animation: pointer 2s ease-out infinite;
+  animation-delay: 0.3s;
+}
+
+.animation-2 {
+  animation: pointer 2s ease-out infinite;
+  animation-delay: 0.5s;
+}
+
+#reload-https {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.link {
+  font-size: 30px;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#https {
+  width: 500px;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  padding: 8px;
+  outline: none;
+}
+
+#button-rede {
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-family: 'PT Sans', sans-serif;
+  cursor: pointer;
+}
+
+#button-rede:hover {
+  background-color: rgb(54, 54, 54);
+  transition: background-color 1s;
+}
+
+#spin {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 3px solid white;
+  animation-name: spin;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+#sinal {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  #https {
+    width: 300px;
+    padding: 15px;
+  }
+
+  #button-rede {
+    height: 45px;
+  }
+
+  #sinal {
+    font-size: 25px;
+  }
+
+  #squares {
+    width: 400px;
+    gap: 3px;
+  }
+
+  .stars, .square {
+    border-radius: 10px;
+    height: 50px;
+    width: 65px;
+  }
+
+  #square {
+    background-color: rgb(0, 119, 223);
+    border: 5px solid rgba(255, 255, 255, 0.397);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+}
