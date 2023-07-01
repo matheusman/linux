@@ -32,7 +32,6 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
 #robot {
@@ -56,7 +55,6 @@ body {
 }
 
 #button {
-  overflow: hidden;
   font-family: 'PT Sans', sans-serif;
   width: 200px;
   height: 50px;
@@ -224,10 +222,14 @@ body {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 440px) {
+
+  body {
+    overflow: scroll;
+  }
 
   #https {
-    width: 300px;
+    width: 150px;
     padding: 15px;
   }
 
@@ -256,5 +258,27 @@ body {
     padding: 10px;
     border-radius: 10px;
   }
-
 }
+  @media screen and (max-width: 350px) {
+
+    body {
+      overflow: scroll;
+      padding: 10px;
+    }
+
+    #squares {
+      width: 300px;
+    }
+    .stars, .square {
+      border-radius: 10px;
+      height: 47px;
+      width: 55px;
+    }
+    #button {
+      width: 150px;
+      height: 50px;
+    }
+    #text {
+      font-size: 20px;
+    }
+  }
